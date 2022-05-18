@@ -9,10 +9,12 @@ import org.testng.annotations.BeforeMethod;
 
 import common.CommonActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import object.GetAQuotePage;
-import object.LandingPage;
-import object.ZipCodePage1;
-import object.ZipCodePage2;
+import pages.GetAQuotePage;
+import pages.LandingPage;
+import pages.PolicyHolderDetailsPage;
+import pages.VehicleDetailsPages;
+import pages.ZipCodePage1;
+import pages.ZipCodePage2;
 
 public class BaseClass {
 	public static WebDriver driver;
@@ -21,14 +23,18 @@ public class BaseClass {
 	public ZipCodePage1 zipCodePage1;
 	public GetAQuotePage getAQuotePage;
 	public ZipCodePage2 zipCodePage2;
+	public PolicyHolderDetailsPage policyHolderDetailsPage;
+	public VehicleDetailsPages vehicleDetailsPages;
+	
 	
 	@BeforeMethod
 	public void setUp() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.get("https://www.amfam.com/");
 		initClasses();
 	}
@@ -45,7 +51,8 @@ public class BaseClass {
 		zipCodePage1 = new ZipCodePage1(driver);
 		getAQuotePage = new GetAQuotePage(driver);
 		zipCodePage2 = new ZipCodePage2(driver);
-		
+		policyHolderDetailsPage = new PolicyHolderDetailsPage(driver);
+		vehicleDetailsPages = new VehicleDetailsPages(driver);
 		
 		
 	}

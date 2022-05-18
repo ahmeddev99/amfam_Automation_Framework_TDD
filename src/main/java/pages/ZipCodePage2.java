@@ -1,4 +1,4 @@
-package object;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,18 +18,17 @@ public class ZipCodePage2 {
 	WebElement inputZipCodElement1;
 	
 	@FindBy (id = "uid_37")
-	WebElement dropDownElement;
+	WebElement autoElement;
 	
 	@FindBy (xpath = "(//button[@type='submit'])[1]")
 	WebElement clickonQuoteElement;
 	
 	public void inputZipcode2(CommonActions commonActions, String value) {
 		commonActions.inputText(inputZipCodElement1, value);
-	}
+	}	
 	
-	public void selectByIndex() {
-		Select select = new Select(dropDownElement);
-		select.selectByIndex(1);
+	public void autoIinsurance(CommonActions commonActions, String typeInsurance) {
+		commonActions.selectByValue(autoElement, typeInsurance);
 	}
 	
 	public void clickonQuote(CommonActions commonActions) {

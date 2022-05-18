@@ -1,4 +1,4 @@
-package object;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,10 +13,20 @@ public class ZipCodePage1 {
 		PageFactory.initElements(driver, this);
 	}
 	
+	@FindBy (xpath = "//div[@class='h1']" )
+	public	WebElement displayTextElement;
+	
 	@FindBy (id = "uid_54")
 	WebElement inputZipCodElement;
+	
 	@FindBy (xpath = "(//span[@class='LoadingButton__content'])[1]")
 	WebElement clickonStartQuotingElement;
+	
+	
+	public void displayText () {
+	String display = displayTextElement.getText();
+		System.out.println(display);
+	}
 	
 	public void inputZipCode(CommonActions commonActions, String value) {
 		commonActions.inputText(inputZipCodElement, value);
