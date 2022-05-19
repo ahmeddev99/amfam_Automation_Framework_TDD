@@ -14,26 +14,25 @@ public class ZipCodePage2 {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy (id = "uid_34")
-	WebElement inputZipCodElement1;
+	@FindBy (id = "uid_34")WebElement inputZipCodElement1;
+	@FindBy (id = "uid_37")WebElement autoElement;
+	@FindBy (xpath = "(//button[@type='submit'])[1]")WebElement clickonQuoteElement;
 	
-	@FindBy (id = "uid_37")
-	WebElement autoElement;
-	
-	@FindBy (xpath = "(//button[@type='submit'])[1]")
-	WebElement clickonQuoteElement;
-	
-	public void inputZipcode2(CommonActions commonActions, String value) {
-		commonActions.inputText(inputZipCodElement1, value);
+	private void inputZipcode2(CommonActions commonActions, String zipCode2) {
+		commonActions.inputText(inputZipCodElement1, zipCode2);
 	}	
-	
-	public void autoIinsurance(CommonActions commonActions, String typeInsurance) {
+	private void autoIinsurance(CommonActions commonActions, String typeInsurance) {
 		commonActions.selectByValue(autoElement, typeInsurance);
 	}
-	
-	public void clickonQuote(CommonActions commonActions) {
+	private void clickonQuote(CommonActions commonActions) {
 		commonActions.click(clickonQuoteElement);
 	}
 	
+	
+	public void zipCodePage2Steps(CommonActions commonActions, String zipCode2, String typeInsurance) {
+		inputZipcode2(commonActions, zipCode2);
+		autoIinsurance(commonActions, typeInsurance);
+		clickonQuote(commonActions);
+	}
 
 }

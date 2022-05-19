@@ -17,8 +17,12 @@ public class LandingPage {
 	@FindBy (xpath = "//button[@class='LeadRouting__select a'][1]")
 	WebElement carElement;
 	
-	public void clickCar(CommonActions commonActions) {
+	private void clickAuto(CommonActions commonActions) {
 		commonActions.click(carElement);
+	}
+	
+	public void landingPageSteps(CommonActions commonActions) {
+		clickAuto(commonActions);
 	}
 	
 

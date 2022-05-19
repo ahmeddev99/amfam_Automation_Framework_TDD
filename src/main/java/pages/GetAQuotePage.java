@@ -13,12 +13,15 @@ public class GetAQuotePage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy (xpath = "//span[text()='Get a Quote']")
-	WebElement getQuotElement;
+	@FindBy (xpath = "//span[text()='Get a Quote']")WebElement getQuotElement;
 	
-	public void clickOnQuote(CommonActions commonActions) {
+	private void clickOnQuote(CommonActions commonActions) {
 		commonActions.click(getQuotElement);
 	}
 	
+	
+	public void getAQuotePageSteps(CommonActions commonActions) {
+		clickOnQuote(commonActions);
+	}
 
 }

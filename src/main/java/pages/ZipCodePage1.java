@@ -28,12 +28,17 @@ public class ZipCodePage1 {
 		System.out.println(display);
 	}
 	
-	public void inputZipCode(CommonActions commonActions, String value) {
-		commonActions.inputText(inputZipCodElement, value);
+	private void inputZipCode(CommonActions commonActions, String zipCode1) {
+		commonActions.inputText(inputZipCodElement, zipCode1);
+	}
+	private void clickOnStartQuoting(CommonActions commonActions) {
+		commonActions.click(clickonStartQuotingElement);
 	}
 	
-	public void clickOnStartQuoting(CommonActions commonActions) {
-		commonActions.click(clickonStartQuotingElement);
+	
+	public void zipCodePage1Steps(CommonActions commonActions, String zipCode1) {
+		inputZipCode(commonActions, zipCode1);
+		clickOnStartQuoting(commonActions);
 	}
 
 }

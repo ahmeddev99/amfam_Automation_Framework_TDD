@@ -27,41 +27,67 @@ public class VehicleDetailsPages {
 	@FindBy(xpath = "//input[@id='F_anotherVehicle_id_0_1']") WebElement AdditionalVehicles;
 	@FindBy(id = "F_continue_0") WebElement detailsPagesContinue;
 	
-	public void vehicleYear(CommonActions commonActions, String year) {
-		commonActions.inputText(vehicleYear, year);
+	public void vehicleYear(CommonActions commonActions, String vYear) {
+		commonActions.inputText(vehicleYear, vYear);
 	}
-	public void vehicleMake(CommonActions commonActions, String make) {
-		commonActions.selectByValue(vehicleMake, make);
+	public void vehicleMake(CommonActions commonActions, String vMake) {
+		commonActions.selectByValue(vehicleMake, vMake);
 	}
-	public void vehicleModel(CommonActions commonActions, String model) {
-		commonActions.selectByValue(vehicleModel, model);
+	public void vehicleModel(CommonActions commonActions, String vModel) {
+		commonActions.selectByValue(vehicleModel, vModel);
 	}
-	public void vehicleTrime(CommonActions commonActions, String trim) {
-		commonActions.selectByValue(vehicleTrime, trim);
+
+	public void vehicleTrime(CommonActions commonActions, String vTrim) {
+		commonActions.selectByValue(vehicleTrime, vTrim); 
 	}
-	public void vehicleCoverage(CommonActions commonActions, String vCoverage) {
+	
+//	public void vehicleTrime(CommonActions commonActions, String trim) {
+//		if (trim != null && trim.length()>1) {
+//			commonActions.selectByValue(vehicleTrime, trim);
+//		} 
+//	}
+	 
+	private void vehicleCoverage(CommonActions commonActions, String vCoverage) {
 		commonActions.selectByValue(vehicleCoverage, vCoverage);
 	}
-	public void vehicleTitleHolder(CommonActions commonActions, String titleHolder) {
+	private void vehicleTitleHolder(CommonActions commonActions, String titleHolder) {
 		commonActions.selectByValue(vehicleTitleHolder, titleHolder);
 	}
-	public void vehicleAirBags(CommonActions commonActions, String airBag) {
+	private void vehicleAirBags(CommonActions commonActions, String airBag) {
 		commonActions.selectByValue(vehicleAirBags, airBag);
 	}
-	public void vehicleAntiTheft(CommonActions commonActions, String antiTheft) {
+	private void vehicleAntiTheft(CommonActions commonActions, String antiTheft) {
 		commonActions.selectByValue(vehicleAntiTheft, antiTheft);
 	}
-	public void vehicleParked(CommonActions commonActions, String parked) {
+	private void vehicleParked(CommonActions commonActions, String parked) {
 		commonActions.selectByValue(vehicleParked, parked);
 	}
-	public void vehiclePrimarilyUsed(CommonActions commonActions, String primarilyUsed) {
+	private void vehiclePrimarilyUsed(CommonActions commonActions, String primarilyUsed) {
 		commonActions.selectByValue(vehiclePrimarilyUsed, primarilyUsed);
 	}
-	public void AdditionalVehicles(CommonActions commonActions) {
+	private void additionalVehicles(CommonActions commonActions) {
 		commonActions.click(AdditionalVehicles);
 	}
-	public void detailsPagesContinue(CommonActions commonActions) {
+	private void detailsPagesContinue(CommonActions commonActions) {
 		commonActions.click(detailsPagesContinue);
+	}
+	
+	public void vehicleDetailsPagesSteps(CommonActions commonActions, String vYear, String vMake, String vModel, String vTrim, String vCoverage, String titleHolder, 
+			String airBag, String antiTheft, String parked, String primarilyUsed) {
+		vehicleYear(commonActions, vYear);
+		vehicleMake(commonActions, vMake);
+		vehicleModel(commonActions, vModel);
+		vehicleTrime(commonActions, vTrim);
+		vehicleCoverage(commonActions, vCoverage);
+		vehicleTitleHolder(commonActions, titleHolder);
+		vehicleAirBags(commonActions, airBag);
+		vehicleAntiTheft(commonActions, antiTheft);
+		vehicleParked(commonActions, parked);
+		vehiclePrimarilyUsed(commonActions, primarilyUsed);
+		additionalVehicles(commonActions);
+		detailsPagesContinue(commonActions);
+		
+		
 	}
 
 

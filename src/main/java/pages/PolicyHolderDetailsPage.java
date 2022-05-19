@@ -29,38 +29,54 @@ public class PolicyHolderDetailsPage {
 	@FindBy (xpath = "//span[text()='Continue ']") WebElement continueElement;
 	
 
-	public void inputFirstName(CommonActions commonActions, String firstName) {
+	private void inputFirstName(CommonActions commonActions, String firstName) {
 		commonActions.inputText(firstNameElement, firstName);
 	}
-	public void inputMiddleName(CommonActions commonActions, char middleName) {
+	private void inputMiddleName(CommonActions commonActions, char middleName) {
 		commonActions.inputText(middleInitElement, middleName);
 	}
-	public void inputLastName(CommonActions commonActions, String lastName) {
+	private void inputLastName(CommonActions commonActions, String lastName) {
 		commonActions.inputText(lastNameElement, lastName);
 	}
-	public void dateOfBirth(CommonActions commonActions, String dob) {
+	private void dateOfBirth(CommonActions commonActions, String dob) {
 		commonActions.inputText(dobElement, dob);
 	}
-	public void emailAddress(CommonActions commonActions, String email) {
+	private void emailAddress(CommonActions commonActions, String email) {
 		commonActions.inputText(emailElement, email);
 	}
-	public void streetAddress(CommonActions commonActions, String streetAddress) {
+	private void streetAddress(CommonActions commonActions, String streetAddress) {
 		commonActions.inputText(streetAddressElement, streetAddress);
 	}
-	public void city(CommonActions commonActions, String city) {
+	private void city(CommonActions commonActions, String city) {
 		commonActions.inputText(cityElement, city);
 	}
-	public void pickState(CommonActions commonActions, String State) {
+	private void pickState(CommonActions commonActions, String State) {
 		commonActions.selectByValue(stateElement, State);
 	}
-	public void zipCode(CommonActions commonActions, String zipcode) {
+	private void zipCode(CommonActions commonActions, String zipcode) {
 		commonActions.inputText(zipCodeElement, zipcode);
 	}
-	public void livingAtTheAddress(CommonActions commonActions, String atTheAddress) {
+	private void livingAtTheAddress(CommonActions commonActions, String atTheAddress) {
 		commonActions.inputText(livingyearsElement, atTheAddress);
 	}
-	public void continueNext(CommonActions commonActions) {
+	private void continueNext(CommonActions commonActions) {
 		commonActions.click(continueElement);
+	}
+	
+	
+	public void policyHolderDetailsPageSteps(CommonActions commonActions, String firstName, char middleName, String lastName, String dob, String email, 
+			String city, String streetAddress, String State, String zipcode, String atTheAddress) {
+		inputFirstName(commonActions, firstName);
+		inputMiddleName(commonActions, middleName);
+		inputLastName(commonActions, lastName);
+		dateOfBirth(commonActions, dob);
+		emailAddress(commonActions, email);
+		city(commonActions, city);
+		streetAddress(commonActions, streetAddress);
+		pickState(commonActions, State);
+		zipCode(commonActions, zipcode);
+		livingAtTheAddress(commonActions, atTheAddress);
+		continueNext(commonActions);
 	}
 
 }
