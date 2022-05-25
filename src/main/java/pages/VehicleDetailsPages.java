@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import common.CommonActions;
+import dataProvider.AutoData;
 
 public class VehicleDetailsPages {
 	
@@ -85,11 +86,22 @@ public class VehicleDetailsPages {
 		vehicleParked(commonActions, parked);
 		vehiclePrimarilyUsed(commonActions, primarilyUsed);
 		additionalVehicles(commonActions);
-		detailsPagesContinue(commonActions);
-		
-		
+		detailsPagesContinue(commonActions);	
 	}
-
-
+	
+	public void vehicleDetailsPagesSteps(CommonActions commonActions, AutoData autoData) {
+		vehicleYear(commonActions, autoData.getvYear());
+		vehicleMake(commonActions, autoData.getvMake());
+		vehicleModel(commonActions, autoData.getvModel());
+		vehicleTrime(commonActions, autoData.getvTrim());
+		vehicleCoverage(commonActions, autoData.getvCoverage());
+		vehicleTitleHolder(commonActions, autoData.getTitleHolder());
+		vehicleAirBags(commonActions, autoData.getAirBag());
+		vehicleAntiTheft(commonActions, autoData.getAntiTheft());
+		vehicleParked(commonActions, autoData.getParked());
+		vehiclePrimarilyUsed(commonActions, autoData.getPrimarilyUsed());
+		additionalVehicles(commonActions);
+		detailsPagesContinue(commonActions);	
+	}
 
 }

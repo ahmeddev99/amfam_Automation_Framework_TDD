@@ -2,8 +2,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 	<test thread-count="5" name="RegressionTest">
+		<groups>
+			<run>
+				<!-- exclude name="jeep"/-->
+				<exclude name="smoke"></exclude>
+			</run>
+		</groups>
 		<classes>
-			<class name="ccom.amfam.test.home.HomeTestRobust" />
+			<!-- class name="ccom.amfam.test.home.HomeTestRobust" /-->
 			<class name="com.amfam.test.auto.AutoTestRobust" />
 		</classes>
 	</test> <!-- RegressionTest -->

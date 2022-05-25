@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SmokeSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="TestChrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <exclude name="home"/>
+        <exclude name="auto"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.amfam.test.auto.AutoTestDataProviderClass">
+        <methods>
+          <include name="cleaningUp"/>
+          <include name="setUp"/>
+          <include name="hondaTestWithDataProviderClass"/>
+        </methods>
+      </class> <!-- com.amfam.test.auto.AutoTestDataProviderClass -->
+    </classes>
+  </test> <!-- TestChrome(failed) -->
+</suite> <!-- Failed suite [SmokeSuite] -->

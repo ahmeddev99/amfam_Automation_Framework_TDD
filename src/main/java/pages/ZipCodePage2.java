@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import common.CommonActions;
+import dataProvider.AutoData;
 
 public class ZipCodePage2 {
 	
@@ -32,6 +33,12 @@ public class ZipCodePage2 {
 	public void zipCodePage2Steps(CommonActions commonActions, String zipCode2, String typeInsurance) {
 		inputZipcode2(commonActions, zipCode2);
 		autoIinsurance(commonActions, typeInsurance);
+		clickonQuote(commonActions);
+	}
+	
+	public void zipCodePage2Steps(CommonActions commonActions, AutoData autoData) {
+		inputZipcode2(commonActions, autoData.getZipCode2());
+		autoIinsurance(commonActions, autoData.getTypeInsurance());
 		clickonQuote(commonActions);
 	}
 

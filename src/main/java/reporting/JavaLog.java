@@ -9,9 +9,9 @@ public class JavaLog {
 	
 	private static final Logger LOGGER = Logger.getLogger(JavaLog.class.getName());
 	
-	public static void log(String msg) {
+	public static void log(final String msg) {
 		LOGGER.info(msg);
-		Reporter.log(msg);
+		Reporter.log(msg + "<br>");
 		
 	}
 	

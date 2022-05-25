@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import common.CommonActions;
+import dataProvider.AutoData;
 
 
 public class PolicyHolderDetailsPage {
@@ -76,6 +77,20 @@ public class PolicyHolderDetailsPage {
 		pickState(commonActions, State);
 		zipCode(commonActions, zipcode);
 		livingAtTheAddress(commonActions, atTheAddress);
+		continueNext(commonActions);
+	}
+	
+	public void policyHolderDetailsPageSteps(CommonActions commonActions, AutoData autoData) {
+		inputFirstName(commonActions, autoData.getFirstName());
+		inputMiddleName(commonActions, autoData.getMiddleName());
+		inputLastName(commonActions, autoData.getLastName());
+		dateOfBirth(commonActions, autoData.getDob());
+		emailAddress(commonActions, autoData.getEmail());
+		city(commonActions, autoData.getCity());
+		streetAddress(commonActions, autoData.getStreetAddress());
+		pickState(commonActions, autoData.getState());
+		zipCode(commonActions, autoData.getZipCode());
+		livingAtTheAddress(commonActions, autoData.getAtTheAddress());
 		continueNext(commonActions);
 	}
 

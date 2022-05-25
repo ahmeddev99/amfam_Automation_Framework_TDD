@@ -4,15 +4,11 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Reporter;
-import org.testng.annotations.AfterClass;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import common.CommonActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -24,54 +20,74 @@ import pages.VehicleDetailsPages;
 import pages.ZipCodePage1;
 import pages.ZipCodePage2;
 import reporting.JavaLog;
+import utilities.Configurable;
+
 
 public class BaseClass {
 	public static WebDriver driver;
-	public LandingPage landingPage;
-	public CommonActions commonActions;
-	public ZipCodePage1 zipCodePage1;
-	public GetAQuotePage getAQuotePage;
-	public ZipCodePage2 zipCodePage2;
-	public PolicyHolderDetailsPage policyHolderDetailsPage;
-	public VehicleDetailsPages vehicleDetailsPages;
-	public DriverDetailsPage driverDetailsPage;
+	protected LandingPage landingPage;
+	protected CommonActions commonActions;
+	protected ZipCodePage1 zipCodePage1;
+	protected GetAQuotePage getAQuotePage;
+	protected ZipCodePage2 zipCodePage2;
+	protected PolicyHolderDetailsPage policyHolderDetailsPage;
+	protected VehicleDetailsPages vehicleDetailsPages;
+	protected DriverDetailsPage driverDetailsPage;
 	
-	@BeforeSuite
-	public void beforeSuite() {
-		Reporter.log("Running our Framework");
-		JavaLog.log("Running our Framework");
-	}
 	
-	@BeforeTest
-	public void beforeTest() {
-		Reporter.log("This is before Test Annotation");
-		JavaLog.log("This is before Test Annotation");
-	}
 	
-	@BeforeClass
-	public void beforeClass() {
-		Reporter.log("Before Class");
-		JavaLog.log("Before Class");
-	}
+//	@BeforeTest
+//	public void beforeTest() {
+//		Reporter.log("This is before Test Annotation");
+//		JavaLog.log("This is before Test Annotation");
+//	}
 	
+//	@BeforeClass
+//	public void beforeClass() {
+//		Reporter.log("Before Class");
+//		JavaLog.log("Before Class");
+//	}
+	
+	@Parameters({"browser"})
 	@BeforeMethod
-	public void setUp() {
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+	public void setUp(String browser) {
+//		WebDriverManager.chromedriver().setup();
+//		driver = new ChromeDriver();
+		// replace top 2 lines with settingUpDriver("browser")
+		settingUpDriver(browser);
+		driver.get(Configurable.getInstance().getUrl());
 		driver.manage().window().maximize();
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.get("https://www.amfam.com/");
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds((Configurable.getInstance().getPageLoadTime())));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds((Configurable.getInstance().getImplicitlyWaitTime())));
 		initClasses();
 	}
+	
+	private WebDriver settingUpDriver(String browser) {
+		String os = System.getProperty("os.name");
+		JavaLog.log("My OS Version is " + os); 
+		if(browser.equalsIgnoreCase("chrome")) {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+		}else if(browser.equalsIgnoreCase("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
+		}else if(browser.equalsIgnoreCase("edge")) {
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+		}else {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+		}
+		return driver;
+	}
+	
 	
 	@AfterMethod
 	public void cleaningUp() {
 		driver.quit();
-		Reporter.log("cleanUp");
-		JavaLog.log("cleanUp");
 	}
 	
+	/*
 	@AfterClass
 	public void afterClass() {
 		Reporter.log("After Class");
@@ -89,6 +105,7 @@ public class BaseClass {
 		Reporter.log("Closing Framework execution");
 		JavaLog.log("Closing Framework execution");
 	}
+	*/
 	
 	public void initClasses() {
 		commonActions = new CommonActions();
