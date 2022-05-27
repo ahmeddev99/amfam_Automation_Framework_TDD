@@ -11,7 +11,7 @@
 		</groups>
 		<classes>
 			<class name="com.amfam.test.auto.AutoTestRobus" />
-			<class name="com.amfam.test.home.HomeTestRobust" />
+			<class name="com.amfam.test.home.HomeTest" />
 		</classes>
 	</test> <!-- Test -->
 	<test name="TestChrome">
@@ -24,7 +24,7 @@
 		</groups>
 		<classes>
 			<class name="com.amfam.test.auto.AutoTestRobus" />
-			<class name="com.amfam.test.home.HomeTestRobust" />
+			<class name="com.amfam.test.home.HomeTest" />
 		</classes>
 	</test>
 	<test name="TestFirefox">
@@ -37,7 +37,7 @@
 		</groups>
 		<classes>
 			<class name="com.amfam.test.auto.AutoTestRobus" />
-			<class name="com.amfam.test.home.HomeTestRobust" />
+			<class name="com.amfam.test.home.HomeTest" />
 		</classes>
 	</test>
 	<test name="TestDefault">
@@ -50,7 +50,7 @@
 		</groups>
 		<classes>
 			<class name="com.amfam.test.auto.AutoTestRobus" />
-			<class name="com.amfam.test.home.HomeTestRobust" />
+			<class name="com.amfam.test.home.HomeTest" />
 		</classes>
 	</test>
 </suite> <!-- GeneralSuite -->

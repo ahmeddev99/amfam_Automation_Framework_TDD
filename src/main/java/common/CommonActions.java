@@ -1,15 +1,28 @@
 package common;
 
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.JavascriptException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import com.google.common.io.Files;
+
 import reporting.JavaLog;
 import base.BaseClass;
 
@@ -80,7 +93,7 @@ public class CommonActions {
 	}
 	
 	
-	public String getText(WebElement element, String expected) {
+	public String getTextRun(WebElement element, String expected) {
 		try {
 			JavaLog.log("Actual value : " + element.getText() + " >>><<< Expected value : " + expected);
 		//	Reporter.log("Actual value : " + element.getText() + " >>><<< Expected value : " + expected);
@@ -93,7 +106,6 @@ public class CommonActions {
 			return element + " : Element Not Found";
 		}
 	}
-	
 	
 	public void scrollUp() {
 		try {
@@ -149,9 +161,27 @@ public class CommonActions {
 		Assert.fail();
 	}
 	
+
+	public void getScreenShot() {
+		Date date = new Date();
+		SimpleDateFormat dateFormat = new SimpleDateFormat("mmddyyyy__hh:mm.ss");
+		String suffix = dateFormat.format(date);
+		File file = new File("./screenShots/Error_" + suffix + " .png");
+		TakesScreenshot ss = ((TakesScreenshot)BaseClass.driver);
+		File srcFile = ss.getScreenshotAs(OutputType.FILE);
+		try {
+		Files.copy(srcFile, file.getAbsoluteFile());
+		}catch (IOException e) {
+			JavaLog.log("Error while taking Screen Shot");
+		}
+	}
 	
-	
-	
-	
-	
+	public void getCurrentWindow() {
+		Set<String> window = BaseClass.driver.getWindowHandles();
+		List<String> listOfWindows = new ArrayList<String>(window);
+		int windowsCount = listOfWindows.size();
+		JavaLog.log("Window Count is : " + windowsCount);
+		BaseClass.driver.switchTo().window(listOfWindows.get(windowsCount - 1));
+	}
+
 }

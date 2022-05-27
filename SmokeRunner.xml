@@ -10,7 +10,7 @@
 		</groups>
 		<classes>
 			<class name="com.amfam.test.auto.AutoTestRobust" />
-			<!--class name="com.amfam.test.home.HomeTestRobust" /-->
+			<!--class name="com.amfam.test.home.HomeTest" /-->
 		</classes>
 	</test> <!-- SmokTest -->
 </suite> <!-- SmokeSuite -->

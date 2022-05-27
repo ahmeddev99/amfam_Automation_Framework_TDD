@@ -2,7 +2,6 @@ package dataProvider;
 
 public class AutoData {
 	
-	private String title;
 	private String zipCode1;
 	private String zipCode2;
 	private String typeInsurance;
@@ -28,11 +27,10 @@ public class AutoData {
 	private String primarilyUsed;
 	
 	
-	public AutoData(String title, String zipCode1, String zipCode2, String typeInsurance, String firstName, char middleName,
+	public AutoData(String zipCode1, String zipCode2, String typeInsurance, String firstName, char middleName,
 			String lastName, String dob, String email, String city, String streetAddress, String state, String zipCode,
 			String atTheAddress, String vYear, String vMake, String vModel, String vTrim, String vCoverage,
 			String titleHolder, String airBag, String antiTheft, String parked, String primarilyUsed) {
-		this.title = title;
 		this.zipCode1 = zipCode1;
 		this.zipCode2 = zipCode2;
 		this.typeInsurance = typeInsurance;
@@ -59,9 +57,6 @@ public class AutoData {
 	}
 
 	
-	public String getTitle() {
-		return title;
-	}
 	public String getZipCode1() {
 		return zipCode1;
 	}

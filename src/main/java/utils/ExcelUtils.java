@@ -1,11 +1,10 @@
-package utilities;
+package utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Iterator;
+import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.commons.collections4.map.HashedMap;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
@@ -77,6 +76,7 @@ public class ExcelUtils {
 							//System.out.println("Null at " + i + " : " + j);
 						}
 						//System.out.println(y +" <<>>"+ cellNo);
+						//System.out.println(cellValue);
 						arrays[y][cellNo] = cellValue;	
 						cellNo++;
 					}
@@ -93,20 +93,7 @@ public class ExcelUtils {
 		return arrays;
 	}
 	
-	
-//	public Map<Integer, Map<String, String>> mapData() {
-//		Map<Integer, Map<String, String>> rowsValues = new HashedMap<Integer, Map<String,String>>();
-//		int totalsRows = sheet.getLastRowNum();
-//		int totalCols = sheet.getRow(0).getLastCellNum();
-//		for() {int i =0; i < totalsRows; i++) {
-//		Map<String, String> rowValues = new HashedMap<String, String>();
-//		for(int j = 0; j < totalCols; j++) {
-//		}
-//		}
-//		return rowsValues;
-//	}
-//	
-//	
+
 	
 	
 	

@@ -2,15 +2,19 @@
 <testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-24T22:02:12 EDT" name="Suite" finished-at="2022-05-24T22:02:13 EDT" duration-ms="540">
+  <suite started-at="2022-05-26T21:54:29 EDT" name="Suite" finished-at="2022-05-26T21:54:30 EDT" duration-ms="1305">
     <groups>
       <group name="excel">
-        <method signature="AutoTestExcelDataProvider.toyotaTestWithoutParam(java.lang.String,java.lang.String,java.lang.String,java.lang.String,char,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@57cf54e1]" name="toyotaTestWithoutParam" class="com.amfam.test.auto.AutoTestExcelDataProvider"/>
+        <method signature="AutoTestExcelDataProvider.toyotaTestWithoutParam(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,char,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@130c12b7]" name="toyotaTestWithoutParam" class="com.amfam.test.auto.AutoTestExcelDataProvider"/>
       </group> <!-- excel -->
     </groups>
-    <test started-at="2022-05-24T22:02:12 EDT" name="Test" finished-at="2022-05-24T22:02:13 EDT" duration-ms="540">
+    <test started-at="2022-05-26T21:54:29 EDT" name="Test" finished-at="2022-05-26T21:54:30 EDT" duration-ms="1305">
       <class name="com.amfam.test.auto.AutoTestExcelDataProvider">
-        <test-method signature="toyotaTestWithoutParam(java.lang.String,java.lang.String,java.lang.String,java.lang.String,char,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@57cf54e1]" started-at="2022-05-24T22:02:12 EDT" name="toyotaTestWithoutParam" data-provider="autoData" finished-at="2022-05-24T22:02:13 EDT" duration-ms="521" status="FAIL">
+        <test-method is-config="true" signature="reportingInitiating()[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@130c12b7]" started-at="2022-05-26T21:54:28 EDT" name="reportingInitiating" finished-at="2022-05-26T21:54:29 EDT" duration-ms="358" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportingInitiating -->
+        <test-method signature="toyotaTestWithoutParam(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,char,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@130c12b7]" started-at="2022-05-26T21:54:29 EDT" name="toyotaTestWithoutParam" data-provider="autoData" finished-at="2022-05-26T21:54:30 EDT" duration-ms="1267" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "java.util.List.contains(Object)" because the return value of "java.util.Map.get(Object)" is null]]>
@@ -54,6 +58,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- toyotaTestWithoutParam -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@130c12b7]" started-at="2022-05-26T21:54:30 EDT" name="endReport" finished-at="2022-05-26T21:54:30 EDT" duration-ms="396" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
       </class> <!-- com.amfam.test.auto.AutoTestExcelDataProvider -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

@@ -12,8 +12,12 @@
     <classes>
       <class name="com.amfam.test.auto.AutoTestExcelDataProvider">
         <methods>
+          <include name="afterEachTestMethod"/>
+          <include name="reportingInitiating"/>
           <include name="cleaningUp"/>
+          <include name="endReport"/>
           <include name="setUp"/>
+          <include name="startReport"/>
           <include name="toyotaTestWithoutParam"/>
         </methods>
       </class> <!-- com.amfam.test.auto.AutoTestExcelDataProvider -->

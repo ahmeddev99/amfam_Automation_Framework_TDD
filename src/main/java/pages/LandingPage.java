@@ -1,16 +1,13 @@
 package pages;
 
 import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import common.CommonActions;
-import dataProvider.AutoData;
-import freemarker.core.Configurable;
-import utilities.ReadTxtFile;
+import utils.ReadConfigFile;
+import utils.ReadTxtFile;
 
 
 
@@ -20,8 +17,9 @@ public class LandingPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath = "//button[@class='LeadRouting__select a'][1]") WebElement carElement;
 	@FindBy(xpath = "//h1[text()='Get a Customized Insurance Quote']") WebElement titlElement;
+	@FindBy(xpath = "//button[@class='LeadRouting__select a'][1]") WebElement carElement;
+
 	
 	private void clickAuto(CommonActions commonActions) {
 		commonActions.click(carElement);
@@ -31,7 +29,7 @@ public class LandingPage {
 		String actualTitle = commonActions.getText(titlElement);
 		String expected = "";
 		
-		String filePath = Configurable.getInstance().getTitleFilePath();
+		String filePath = ReadConfigFile.getInstance().getTitleFilePath();
 		ReadTxtFile readTxtFile = new ReadTxtFile(filePath);
 		
 		List<String> titles = readTxtFile.getListData();
@@ -44,9 +42,13 @@ public class LandingPage {
 	}
 	
 	public void landingPageSteps(CommonActions commonActions) {
-		clickAuto(commonActions);
 		checkTitle(commonActions);
+		clickAuto(commonActions);
 	}
 	
+	public void landingPageSteps(CommonActions commonActions, String title) {
+		checkTitle(commonActions);
+		clickAuto(commonActions);
+	}
 
 }

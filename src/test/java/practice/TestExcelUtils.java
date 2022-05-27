@@ -1,6 +1,6 @@
 package practice;
 
-import utilities.ExcelUtils;
+import utils.ExcelUtils;
 
 public class TestExcelUtils {
 	

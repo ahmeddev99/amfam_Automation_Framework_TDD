@@ -2,7 +2,7 @@ package com.amfam.test.home;
 
 import org.testng.annotations.Test;
 
-public class HomeTestRobust {
+public class HomeTest {
 	
 	@Test(groups = {"home"})
 	public void homeTest1() {

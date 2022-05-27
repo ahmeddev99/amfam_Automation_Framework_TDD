@@ -1,4 +1,4 @@
-package utilities;
+package utils;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -6,10 +6,11 @@ import java.util.Properties;
 
 import reporting.JavaLog;
 
-public class Configurable {
+
+public class ReadConfigFile {
 	
-	private static Configurable configurable;
-	private String path = "./configuration/config.properties";
+	private static ReadConfigFile ReadConfigFile;
+	private String path = "./configuration/configure.properties";
 	
 	
 	private String url;
@@ -20,17 +21,17 @@ public class Configurable {
 	private static String titleFilePath;
 	
 	
-	private Configurable() {
+	private ReadConfigFile() {
 		
 	}
 	
 	// singleton Class
-	public static Configurable getInstance() {
-		if (configurable == null) {
-			configurable = new Configurable();
+	public static ReadConfigFile getInstance() {
+		if (ReadConfigFile == null) {
+			ReadConfigFile = new ReadConfigFile();
 		}
-		configurable.loadProperties();
-		return configurable;
+		ReadConfigFile.loadProperties();
+		return ReadConfigFile;
 	}
 	
 	
