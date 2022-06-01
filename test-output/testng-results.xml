@@ -1,37 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="5" passed="0" failed="0" skipped="5">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-26T21:54:29 EDT" name="Suite" finished-at="2022-05-26T21:54:30 EDT" duration-ms="1305">
+  <suite started-at="2022-05-28T22:51:39 EDT" name="Default suite" finished-at="2022-05-28T22:51:40 EDT" duration-ms="1147">
     <groups>
       <group name="excel">
-        <method signature="AutoTestExcelDataProvider.toyotaTestWithoutParam(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,char,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@130c12b7]" name="toyotaTestWithoutParam" class="com.amfam.test.auto.AutoTestExcelDataProvider"/>
+        <method signature="AutoTestExcelDataProvider.toyotaTestWithoutParam(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" name="toyotaTestWithoutParam" class="com.amfam.test.auto.AutoTestExcelDataProvider"/>
       </group> <!-- excel -->
     </groups>
-    <test started-at="2022-05-26T21:54:29 EDT" name="Test" finished-at="2022-05-26T21:54:30 EDT" duration-ms="1305">
+    <test started-at="2022-05-28T22:51:39 EDT" name="Default test" finished-at="2022-05-28T22:51:40 EDT" duration-ms="1147">
       <class name="com.amfam.test.auto.AutoTestExcelDataProvider">
-        <test-method is-config="true" signature="reportingInitiating()[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@130c12b7]" started-at="2022-05-26T21:54:28 EDT" name="reportingInitiating" finished-at="2022-05-26T21:54:29 EDT" duration-ms="358" status="PASS">
+        <test-method is-config="true" signature="reportingInitiating()[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:38 EDT" name="reportingInitiating" finished-at="2022-05-28T22:51:39 EDT" duration-ms="446" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reportingInitiating -->
-        <test-method signature="toyotaTestWithoutParam(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,char,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@130c12b7]" started-at="2022-05-26T21:54:29 EDT" name="toyotaTestWithoutParam" data-provider="autoData" finished-at="2022-05-26T21:54:30 EDT" duration-ms="1267" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="setUp" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700374" status="FAIL">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[Cannot invoke "java.util.List.contains(Object)" because the return value of "java.util.Map.get(Object)" is null]]>
+              <![CDATA[
+Parameter 'browser' is required by BeforeMethod on method setUp but has not been marked @Optional or defined
+in C:\Users\rubal\AppData\Local\Temp\testng-eclipse--1889339024\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.List.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
-at org.testng.internal.reflect.ReflectionRecipes.isInstanceOf(ReflectionRecipes.java:76)
-at org.testng.internal.reflect.ReflectionRecipes.exactMatch(ReflectionRecipes.java:256)
-at org.testng.internal.reflect.ReflectionRecipes.exactMatch(ReflectionRecipes.java:241)
-at org.testng.internal.reflect.DirectMethodMatcher.match(DirectMethodMatcher.java:33)
-at org.testng.internal.reflect.AbstractNodeMethodMatcher.hasConformance(AbstractNodeMethodMatcher.java:25)
-at org.testng.internal.reflect.AbstractMethodMatcher.conforms(AbstractMethodMatcher.java:25)
-at org.testng.internal.reflect.DataProviderMethodMatcher.hasConformance(DataProviderMethodMatcher.java:20)
-at org.testng.internal.reflect.AbstractMethodMatcher.conforms(AbstractMethodMatcher.java:25)
-at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:34)
-at org.testng.internal.Parameters.injectParameters(Parameters.java:914)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:34)
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeMethod on method setUp but has not been marked @Optional or defined
+in C:\Users\rubal\AppData\Local\Temp\testng-eclipse--1889339024\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:270)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
+at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -54,15 +56,931 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startReport(java.lang.reflect.Method)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="startReport" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700382" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method signature="toyotaTestWithoutParam(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="toyotaTestWithoutParam" data-provider="autoData" finished-at="2022-05-28T22:51:40 EDT" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Get a Customized Insurance Quote]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[07424]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[07424]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[A]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Van]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[P]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Diesel]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[01231982]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[youcanemail@gmail.com]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Woodland Park]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1116 McBride Ave]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[NJ]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[07424]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[2003]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[2021]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[HOND]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[CIVIC SPORT]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[HCHBK 4D, V4, 1.5L, 2WD]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[002]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeMethod on method setUp but has not been marked @Optional or defined
+in C:\Users\rubal\AppData\Local\Temp\testng-eclipse--1889339024\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeMethod on method setUp but has not been marked @Optional or defined
+in C:\Users\rubal\AppData\Local\Temp\testng-eclipse--1889339024\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:270)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
+at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- toyotaTestWithoutParam -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@130c12b7]" started-at="2022-05-26T21:54:30 EDT" name="endReport" finished-at="2022-05-26T21:54:30 EDT" duration-ms="396" status="PASS">
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="afterEachTestMethod" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700389" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="cleaningUp()[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="cleaningUp" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700390" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleaningUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="setUp" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700392" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startReport(java.lang.reflect.Method)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="startReport" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700393" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method signature="toyotaTestWithoutParam(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="toyotaTestWithoutParam" data-provider="autoData" finished-at="2022-05-28T22:51:40 EDT" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Get a Customized Insurance Quote]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[07508]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[07508]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[A]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Jimmy]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[M]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Butler]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[12/25/1988]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[reachme@gmail.com]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Haledon]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[373 Hobart Ave]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[NJ]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[07508]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[2005]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[2020]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[TYTA]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[CAMRY LE AWN]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[SEDAN 4D, V4, 2.5L, 4WD]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[002]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeMethod on method setUp but has not been marked @Optional or defined
+in C:\Users\rubal\AppData\Local\Temp\testng-eclipse--1889339024\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeMethod on method setUp but has not been marked @Optional or defined
+in C:\Users\rubal\AppData\Local\Temp\testng-eclipse--1889339024\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:270)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
+at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- toyotaTestWithoutParam -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="afterEachTestMethod" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700396" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="cleaningUp()[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="cleaningUp" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700397" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleaningUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="setUp" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700399" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startReport(java.lang.reflect.Method)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="startReport" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700400" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method signature="toyotaTestWithoutParam(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="toyotaTestWithoutParam" data-provider="autoData" finished-at="2022-05-28T22:51:40 EDT" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Get a Customized Insurance Quote]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[07457]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[07457]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[A]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Connor]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[J]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Knapp]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[03/231/992]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[tryat@gmail.com]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Riverdale]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1 S Corporate Dr]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[NJ]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[07457]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[2009]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[2019]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[HOND]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[CIVIC SPORT]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[HCHBK 4D, V4, 1.5L, 2WD]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[002]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeMethod on method setUp but has not been marked @Optional or defined
+in C:\Users\rubal\AppData\Local\Temp\testng-eclipse--1889339024\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeMethod on method setUp but has not been marked @Optional or defined
+in C:\Users\rubal\AppData\Local\Temp\testng-eclipse--1889339024\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:270)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
+at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- toyotaTestWithoutParam -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="afterEachTestMethod" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700404" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="cleaningUp()[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="cleaningUp" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700405" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleaningUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="setUp" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700406" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startReport(java.lang.reflect.Method)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="startReport" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700407" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method signature="toyotaTestWithoutParam(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="toyotaTestWithoutParam" data-provider="autoData" finished-at="2022-05-28T22:51:40 EDT" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Get a Customized Insurance Quote]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[11418]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[11418]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[A]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Jahangir]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[P]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Kabir]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[05/09/2000]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Jkabir@gmail.com]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Richmond Hill]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[12312 Liberty Avenue]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[NY]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[11418]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[2003]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[2022]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[HOND]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[CIVIC SPORT]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[HCHBK 4D, V4, 1.5L, 2WD]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[002]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeMethod on method setUp but has not been marked @Optional or defined
+in C:\Users\rubal\AppData\Local\Temp\testng-eclipse--1889339024\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeMethod on method setUp but has not been marked @Optional or defined
+in C:\Users\rubal\AppData\Local\Temp\testng-eclipse--1889339024\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:270)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
+at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- toyotaTestWithoutParam -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="afterEachTestMethod" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700412" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="cleaningUp()[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="cleaningUp" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700414" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleaningUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="setUp" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700416" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startReport(java.lang.reflect.Method)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="startReport" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700417" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method signature="toyotaTestWithoutParam(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="toyotaTestWithoutParam" data-provider="autoData" finished-at="2022-05-28T22:51:40 EDT" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Get a Customized Insurance Quote]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[11423]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[11423]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[A]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Jack]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Jill]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[01/03/1977]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Jjack@gmail.com]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Hollis]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[10089 200th St]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[NY]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[11423]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[2005]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[2018]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[TYTA]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[CAMRY LE AWN]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[SEDAN 4D, V4, 2.5L, 4WD]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[002]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeMethod on method setUp but has not been marked @Optional or defined
+in C:\Users\rubal\AppData\Local\Temp\testng-eclipse--1889339024\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeMethod on method setUp but has not been marked @Optional or defined
+in C:\Users\rubal\AppData\Local\Temp\testng-eclipse--1889339024\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:270)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
+at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- toyotaTestWithoutParam -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="afterEachTestMethod" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700423" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="cleaningUp()[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="cleaningUp" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1653792700424" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleaningUp -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.amfam.test.auto.AutoTestExcelDataProvider@273e7444]" started-at="2022-05-28T22:51:40 EDT" name="endReport" finished-at="2022-05-28T22:51:40 EDT" duration-ms="384" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
       </class> <!-- com.amfam.test.auto.AutoTestExcelDataProvider -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

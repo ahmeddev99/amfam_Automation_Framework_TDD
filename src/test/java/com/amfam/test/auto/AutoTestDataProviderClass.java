@@ -21,8 +21,7 @@ public class AutoTestDataProviderClass extends BaseClass{
 		list.add(toyotaData);
 		list.add(hondaData);
 		return list.iterator();
-	}
-		 
+	}		 
 			
 	
 	@Test(enabled = true, priority = 1, groups = {"externalData, auto"}, dataProvider = "autoData")

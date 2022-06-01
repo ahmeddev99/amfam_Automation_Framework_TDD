@@ -28,6 +28,7 @@ public class PolicyHolderDetailsPage {
 	@FindBy (id = "F_zipCode_0") WebElement zipCodeElement;
 	@FindBy (id = "F_livingYear_0") WebElement livingyearsElement;
 	@FindBy (xpath = "//span[text()='Continue ']") WebElement continueElement;
+	@FindBy(xpath = "//span[@class='addressD']") WebElement checkBoxElement;
 	
 
 	private void inputFirstName(CommonActions commonActions, String firstName) {
@@ -63,7 +64,6 @@ public class PolicyHolderDetailsPage {
 	private void continueNext(CommonActions commonActions) {
 		commonActions.click(continueElement);
 	}
-	
 	
 	public void policyHolderDetailsPageSteps(CommonActions commonActions, String firstName, char middleName, String lastName, String dob, String email, 
 			String city, String streetAddress, String State, String zipcode, String atTheAddress) {

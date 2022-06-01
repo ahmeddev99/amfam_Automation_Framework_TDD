@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [SmokeSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="TestChrome(failed)">
-    <parameter name="browser" value="chrome"/>
+  <test thread-count="5" name="RegressionTest(failed)">
     <groups>
       <run>
         <exclude name="home"/>
-        <exclude name="auto"/>
+        <exclude name="toyota"/>
       </run>
     </groups>
     <classes>
-      <class name="com.amfam.test.auto.AutoTestDataProviderClass">
+      <class name="com.amfam.test.auto.AutoTestRobust">
         <methods>
+          <include name="afterEachTestMethod"/>
+          <include name="reportingInitiating"/>
           <include name="cleaningUp"/>
+          <include name="endReport"/>
           <include name="setUp"/>
-          <include name="hondaTestWithDataProviderClass"/>
+          <include name="startReport"/>
+          <include name="hondaTest"/>
         </methods>
-      </class> <!-- com.amfam.test.auto.AutoTestDataProviderClass -->
+      </class> <!-- com.amfam.test.auto.AutoTestRobust -->
     </classes>
-  </test> <!-- TestChrome(failed) -->
+  </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [SmokeSuite] -->

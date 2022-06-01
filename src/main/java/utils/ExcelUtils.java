@@ -94,20 +94,50 @@ public class ExcelUtils {
 	}
 	
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public Map<Integer, Map<String, String>> mapData() {
+		Map<Integer, Map<String, String>> allRowsMap = new HashMap<Integer, Map<String, String>>();
+
+		int totalsRows = sheet.getLastRowNum();
+		int totalCols = sheet.getRow(0).getLastCellNum();
+
+		int yRowCounter = 0;
+		for (int i = 0; i < totalsRows; i++) {
+			Map<String, String> eachRowMap = new HashMap<String, String>();
+			// eachRowMap.clear();
+			boolean isY = false;
+			for (int j = 0; j < totalCols; j++) {
+				String keyValue = "";
+				String cellValue = "";
+				try {
+					Cell keyCell = sheet.getRow(0).getCell(j);
+					keyValue = keyCell.getStringCellValue();
+					Cell valueCell = sheet.getRow(i).getCell(j);
+					if (valueCell.getCellType() == CellType.STRING) {
+						cellValue = valueCell.getStringCellValue();
+					} else if (valueCell.getCellType() == CellType.BOOLEAN) {
+						cellValue = String.valueOf(valueCell.getBooleanCellValue());
+					}
+					if (cellValue.equalsIgnoreCase("y")) {
+						isY = true;
+					}
+					eachRowMap.put(keyValue, cellValue);
+				} catch (NullPointerException e) {
+					// e.printStackTrace();
+				}
+			}
+			try {
+				// if (eachRowMap.get("Execution").equalsIgnoreCase("y")) {
+				if (isY) {
+					// System.out.println(yRowCounter);
+					allRowsMap.put(yRowCounter, eachRowMap);
+					yRowCounter++;
+				}
+			} catch (Exception e) {
+				// e.printStackTrace();
+			}
+		}
+		return allRowsMap;
+	}
 	
 	
 }

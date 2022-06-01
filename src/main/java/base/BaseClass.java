@@ -15,6 +15,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
+
 import common.CommonActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.DriverDetailsPage;
@@ -52,10 +53,10 @@ public class BaseClass {
 	@Parameters({"browser"})
 	@BeforeMethod
 	public void setUp(String browser) {
-//		WebDriverManager.chromedriver().setup();
-//		driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
 		// replace top 2 lines with settingUpDriver("browser")
-		settingUpDriver(browser);
+//		settingUpDriver(browser);
 		driver.get(ReadConfigFile.getInstance().getUrl());
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds((ReadConfigFile.getInstance().getPageLoadTime())));
@@ -99,7 +100,8 @@ public class BaseClass {
 			ExtentTestManager.getTest().log(Status.SKIP, "Test Skipped");
 		} else if (result.getStatus() == ITestResult.FAILURE) {
 			ExtentTestManager.getTest().log(Status.FAIL, "Test Failed \n" + result.getThrowable());
-			commonActions.getScreenShot();
+			String ssLocation = commonActions.getScreenShot();
+			ExtentTestManager.getTest().addScreenCaptureFromPath(ssLocation);
 		}
 	}
 
