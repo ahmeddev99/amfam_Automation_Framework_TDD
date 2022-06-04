@@ -19,7 +19,7 @@ public class AutoTestExcelDataProvider extends BaseClass {
 	}
 	
 	@Test(dataProvider = "autoData", groups = {"excel"})
-	public void toyotaTestWithoutParam(String title,String zipCode1, String zipCode2, String typeInsurance, String firstName, String middleName, String lastName, String dob, 
+	public void toyotaTest(String title,String zipCode1, String zipCode2, String typeInsurance, String firstName, String middleName, String lastName, String dob, 
 			String email, String city, String streetAddress, String State, String zipcode, String atTheAddress, String vYear, String vMake, String vModel, 
 			String vTrim, String vCoverage, String titleHolder, String airBag, String antiTheft, String parked, String primarilyUsed) {
 		landingPage.landingPageSteps(commonActions, title);

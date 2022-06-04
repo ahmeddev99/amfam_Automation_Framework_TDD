@@ -96,8 +96,23 @@ public class Notes {
 				inputMiddleName(commonActions, middleName);	
 			}
 	
+			
+			@FindBy(xpath = "//label[text()='I only want a checking account']")
+			public WebElement checkingAccountElement;
+			String checkInAccountStringLocator = "//label[text()='I only want a checking account']";
+			
+			public void clickCheckingAccountPage(CommonsActions commonsActions) {
+				commonsActions.sleep(5);
+				commonsActions.click(checkingAccountElement);
+			}
+			public void isElementSelected(CommonsActions cm) {
+				cm.isSelected(checkingAccountElement);
+			}
+
 	
 	
+// -------------------------------------------------------------------------------------------------------------
+		//	
 	
 	
 	

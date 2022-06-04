@@ -10,9 +10,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
@@ -66,6 +68,25 @@ public class CommonActions {
 			
 		}
 	}
+	
+	
+	public void click(String element) {
+		try {
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(element)));
+			BaseClass.driver.findElement(By.xpath(element)).click();
+			JavaLog.log("Element is Clicking : " + element + "<br>");
+		} catch (StaleElementReferenceException e) {
+			e.printStackTrace();
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(element)));
+			BaseClass.driver.findElement(By.xpath(element)).click();
+			JavaLog.log("Element is Clicking : " + element + "<br>");
+		} catch (Throwable e) {
+			e.printStackTrace();
+			JavaLog.log("Element is unable to click: " + element + "\n" + e.getMessage() + "<br>");
+			Assert.fail();
+		}
+	}
+
 	
 	public void inputText(WebElement element, char text) {
 		try {
@@ -211,5 +232,7 @@ public class CommonActions {
 		}
 		return fileLocation;
 	}
+	
+	
 
 }
