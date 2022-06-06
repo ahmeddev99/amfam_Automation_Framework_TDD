@@ -42,7 +42,7 @@ public class ReadConfigFile {
 			properties.load(reader);
 			// ^^ top 3 lines are reading the configure.properties file
 			url = properties.getProperty("url");
-			implicitlyWaitTime = Integer.parseInt(properties.getProperty("elementImplicitWait"));
+			implicitlyWaitTime = Integer.parseInt(properties.getProperty("implicitlyWaitTime"));
 			pageLoadTime = Integer.parseInt(properties.getProperty("pageLoadWait"));
 			excelPath = properties.getProperty("excelPath");
 			sheetName = properties.getProperty("sheetName");
