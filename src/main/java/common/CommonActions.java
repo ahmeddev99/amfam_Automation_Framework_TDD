@@ -28,7 +28,9 @@ import com.google.common.io.Files;
 import reporting.JavaLog;
 import base.BaseClass;
 
-
+/*
+ * Purpose of common actions class is to reuse all events (Click, SendKeys, GetText) again for all test steps
+ */
 
 
 public class CommonActions {
@@ -48,18 +50,6 @@ public class CommonActions {
 		}
 	}
 	
-	
-	public void inputText(WebElement element, String text) {
-		try {
-			wait.until(ExpectedConditions.visibilityOf(element));
-			element.sendKeys(text);
-			JavaLog.log(text + " : value passed to element : " + element + "<br>");
-		} catch (Exception e) {
-			e.printStackTrace();
-			JavaLog.log("Element is not found : " + element + "\n" + e.getMessage() + "<br>");
-			Assert.fail();
-		}
-	}		
 	
 	public void sleep(double sec) {
 		try {
@@ -86,6 +76,21 @@ public class CommonActions {
 			Assert.fail();
 		}
 	}
+	
+	
+	public void inputText(WebElement element, String text) {
+		try {
+			wait.until(ExpectedConditions.visibilityOf(element));
+			element.sendKeys(text);
+			JavaLog.log(text + " : value passed to element : " + element + "<br>");
+		} catch (Exception e) {
+			e.printStackTrace();
+			JavaLog.log("Element is not found : " + element + "\n" + e.getMessage() + "<br>");
+			Assert.fail();
+		}
+	}		
+	
+
 
 	
 	public void inputText(WebElement element, char text) {

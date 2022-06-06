@@ -64,6 +64,7 @@ public class BaseClass {
 		initClasses();
 	}
 	
+	@Parameters("browser")
 	private WebDriver settingUpDriver(String browser) {
 		if(browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();

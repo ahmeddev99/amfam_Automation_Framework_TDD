@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="RegressionTest(failed)">
-    <groups>
-      <run>
-        <exclude name="smoke"/>
-      </run>
-    </groups>
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.amfam.test.auto.AutoTestRobust">
+      <class name="practice.TestRobustPractice">
         <methods>
           <include name="afterEachTestMethod"/>
           <include name="toyotaTestWithoutParam"/>
           <include name="reportingInitiating"/>
           <include name="cleaningUp"/>
-          <include name="toyotaTest"/>
           <include name="endReport"/>
           <include name="setUp"/>
           <include name="startReport"/>
           <include name="hondaTest"/>
+          <include name="toyotaTest"/>
         </methods>
-      </class> <!-- com.amfam.test.auto.AutoTestRobust -->
+      </class> <!-- practice.TestRobustPractice -->
     </classes>
-  </test> <!-- RegressionTest(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
