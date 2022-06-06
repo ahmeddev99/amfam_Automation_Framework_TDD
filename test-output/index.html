@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\rubal\eclipse-workspace\com.amfam.TDD\PracticeRunner.xml</span>
+                    <span>C:\Users\rubal\eclipse-workspace\com.amfam.TDD\DataProvider.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -61,7 +61,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>3 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,40 +93,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 2 failed,  1 skipped,  </span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="practice.TestRobustPractice" class="method navigator-link" hash-for-method="toyotaTest">toyotaTest</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.amfam.test.auto.AutoTestDataProviderClass" class="method navigator-link" hash-for-method="autoTestWithDataProviderClass(dataProvider.AutoData@650c405c)">autoTestWithDataProviderClass(dataProvider.AutoData@650c405c)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="practice.TestRobustPractice" class="method navigator-link" hash-for-method="toyotaTestWithoutParam">toyotaTestWithoutParam</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.amfam.test.auto.AutoTestDataProviderClass" class="method navigator-link" hash-for-method="autoTestWithDataProviderClass(dataProvider.AutoData@788e3702)">autoTestWithDataProviderClass(dataProvider.AutoData@788e3702)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
-                    </span>
-                    <div class="method-list-content skipped suite-Suite">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="practice.TestRobustPractice" class="method navigator-link" hash-for-method="hondaTest">hondaTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-Suite -->
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -138,121 +124,53 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">practice.TestRobustPractice</span>
+              <img src="passed.png"/>
+              <span class="class-name">com.amfam.test.auto.AutoTestDataProviderClass</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="toyotaTest">
-                  </a> <!-- toyotaTest -->
-                  <span class="method-name">toyotaTest</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Parameter &apos;zipvalue&apos; is required by @Test on method toyotaTest but has not been marked @Optional or defined
-in C:\Users\rubal\eclipse-workspace\com.amfam.TDD\PracticeRunner.xml
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
+                  <a name="autoTestWithDataProviderClass(dataProvider.AutoData@650c405c)">
+                  </a> <!-- autoTestWithDataProviderClass(dataProvider.AutoData@650c405c) -->
+                  <span class="method-name">autoTestWithDataProviderClass</span>
+                  <span class="parameters">(dataProvider.AutoData@650c405c)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="toyotaTestWithoutParam">
-                  </a> <!-- toyotaTestWithoutParam -->
-                  <span class="method-name">toyotaTestWithoutParam</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=102.0.5005.63)
-Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
-System info: host: &apos;CODEONE&apos;, ip: &apos;192.168.1.174&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2a43d2abf1be7dd9d2c4884643299af6, findElement {using=id, value=F_model_0}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.63, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\rubal\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53495}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53495/devtoo..., se:cdpVersion: 102.0.5005.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2a43d2abf1be7dd9d2c4884643299af6
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy20.toString(Unknown Source)
-	at java.base/java.lang.String.valueOf(String.java:4215)
-	at java.base/java.lang.StringBuilder.append(StringBuilder.java:169)
-	at common.CommonActions.selectByValue(CommonActions.java:111)
-	at pages.VehicleDetailsPages.vehicleModel(VehicleDetailsPages.java:37)
-	at pages.VehicleDetailsPages.vehicleDetailsPagesSteps(VehicleDetailsPages.java:79)
-	at practice.TestRobustPractice.toyotaTestWithoutParam(TestRobustPractice.java:29)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
+                  <a name="autoTestWithDataProviderClass(dataProvider.AutoData@788e3702)">
+                  </a> <!-- autoTestWithDataProviderClass(dataProvider.AutoData@788e3702) -->
+                  <span class="method-name">autoTestWithDataProviderClass</span>
+                  <span class="parameters">(dataProvider.AutoData@788e3702)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">practice.TestRobustPractice</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="hondaTest">
-                  </a> <!-- hondaTest -->
-                  <span class="method-name">hondaTest</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=102.0.5005.63)
-Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
-System info: host: &apos;CODEONE&apos;, ip: &apos;192.168.1.174&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2a43d2abf1be7dd9d2c4884643299af6, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.63, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\rubal\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53495}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53495/devtoo..., se:cdpVersion: 102.0.5005.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2a43d2abf1be7dd9d2c4884643299af6
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:333)
-	at common.CommonActions.getScreenShot(CommonActions.java:226)
-	at base.BaseClass.afterEachTestMethod(BaseClass.java:103)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 37 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\rubal\eclipse-workspace\com.amfam.TDD\PracticeRunner.xml</span>
+            <span class="header-content">C:\Users\rubal\eclipse-workspace\com.amfam.TDD\DataProvider.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TestChrome&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;exclude name=&quot;home&quot;/&gt;
+        &lt;exclude name=&quot;auto&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;practice.TestRobustPractice&quot;/&gt;
+      &lt;class name=&quot;com.amfam.test.home.HomeTest&quot;/&gt;
+      &lt;class name=&quot;com.amfam.test.auto.AutoTestDataProviderClass&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- TestChrome --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -264,7 +182,7 @@ Session ID: 2a43d2abf1be7dd9d2c4884643299af6
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">TestChrome (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -275,38 +193,10 @@ Session ID: 2a43d2abf1be7dd9d2c4884643299af6
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">auto</span>
+              <span class="test-group-name">externalData, auto</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">hondaTest</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">toyotaTest</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">toyotaTestWithoutParam</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
-              <span class="test-group-name">honda</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">hondaTest</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
-              <span class="test-group-name">toyota</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">toyotaTest</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">toyotaTestWithoutParam</span>
+                <span class="method-in-group-name">autoTestWithDataProviderClass</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -326,24 +216,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'toyotaTestWithoutParam')
-data.setCell(0, 2, 'practice.TestRobustPractice')
-data.setCell(0, 3, 58246);
+data.setCell(0, 1, 'autoTestWithDataProviderClass')
+data.setCell(0, 2, 'com.amfam.test.auto.AutoTestDataProviderClass')
+data.setCell(0, 3, 49230);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'toyotaTest')
-data.setCell(1, 2, 'practice.TestRobustPractice')
-data.setCell(1, 3, 0);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'hondaTest')
-data.setCell(2, 2, 'practice.TestRobustPractice')
-data.setCell(2, 3, 0);
+data.setCell(1, 1, 'autoTestWithDataProviderClass')
+data.setCell(1, 2, 'com.amfam.test.auto.AutoTestDataProviderClass')
+data.setCell(1, 3, 43625);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 58 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -355,30 +241,77 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">toyotaTestWithoutParam</span>
+              <span class="reporter-method-name">autoTestWithDataProviderClass(dataProvider.AutoData@650c405c)</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">[[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> xpath: //h1[text()='Get a Customized Insurance Quote']] has text : GET A CUSTOMIZED INSURANCE QUOTE<br></span>
+                <span class="reporter-method-output">[[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> xpath: //h1[text()='Get a Customized Insurance Quote']] has text : GET A CUSTOMIZED INSURANCE QUOTE<br></span>
                 <span class="reporter-method-output">Actual : GET A CUSTOMIZED INSURANCE QUOTE<<<>>>Expeted : GET A CUSTOMIZED INSURANCE QUOTE<br></span>
-                <span class="reporter-method-output">Element is clicking : [[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> xpath: //button[@class='LeadRouting__select a'][1]]<br><br></span>
-                <span class="reporter-method-output">07457 : value passed to element : [[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> id: uid_54]<br><br></span>
+                <span class="reporter-method-output">Element is clicking : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> xpath: //button[@class='LeadRouting__select a'][1]]<br><br></span>
+                <span class="reporter-method-output">07424 : value passed to element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: uid_54]<br><br></span>
                 <span class="reporter-method-output">Element is clicking : Proxy element for: DefaultElementLocator 'By.xpath: (//span[@class='LoadingButton__content'])[1]'<br><br></span>
                 <span class="reporter-method-output">Element is clicking : Proxy element for: DefaultElementLocator 'By.xpath: //span[text()='Get a Quote']'<br><br></span>
-                <span class="reporter-method-output">07457 : value passed to element : [[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> id: uid_34]<br><br></span>
-                <span class="reporter-method-output">A : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> id: uid_37]<br><br></span>
-                <span class="reporter-method-output">Element is clicking : [[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> xpath: (//button[@type='submit'])[1]]<br><br></span>
-                <span class="reporter-method-output">Pippen : value passed to element : [[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> id: F_PH_FirstName_0]<br><br></span>
-                <span class="reporter-method-output">Z : value passed to element : [[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> id: F_PH_MiddleInitial_0]<br><br></span>
-                <span class="reporter-method-output">Jordan : value passed to element : [[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> id: F_PH_LastName_0]<br><br></span>
-                <span class="reporter-method-output">01231982 : value passed to element : [[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> id: F_PH_DOB_0]<br><br></span>
-                <span class="reporter-method-output">youcanemail@gmail.com : value passed to element : [[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> id: F_PH_email_0]<br><br></span>
-                <span class="reporter-method-output">Riverdale : value passed to element : [[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> id: F_city_0]<br><br></span>
-                <span class="reporter-method-output">1 S Corporate Dr : value passed to element : [[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> id: F_street_0]<br><br></span>
-                <span class="reporter-method-output">NJ : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> id: F_state_0]<br><br></span>
-                <span class="reporter-method-output">07457 : value passed to element : [[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> id: F_zipCode_0]<br><br></span>
-                <span class="reporter-method-output">2003 : value passed to element : [[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> id: F_livingYear_0]<br><br></span>
-                <span class="reporter-method-output">Element is clicking : [[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> xpath: //span[text()='Continue ']]<br><br></span>
-                <span class="reporter-method-output">2021 : value passed to element : [[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> id: F_year_0]<br><br></span>
-                <span class="reporter-method-output">BMW : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (2a43d2abf1be7dd9d2c4884643299af6)] -> id: F_make_0]<br><br></span>
+                <span class="reporter-method-output">07424 : value passed to element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: uid_34]<br><br></span>
+                <span class="reporter-method-output">A : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: uid_37]<br><br></span>
+                <span class="reporter-method-output">Element is clicking : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> xpath: (//button[@type='submit'])[1]]<br><br></span>
+                <span class="reporter-method-output">Palace : value passed to element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_PH_FirstName_0]<br><br></span>
+                <span class="reporter-method-output">Z : value passed to element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_PH_MiddleInitial_0]<br><br></span>
+                <span class="reporter-method-output">Laundromat : value passed to element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_PH_LastName_0]<br><br></span>
+                <span class="reporter-method-output">01231982 : value passed to element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_PH_DOB_0]<br><br></span>
+                <span class="reporter-method-output">youcanemail@gmail.com : value passed to element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_PH_email_0]<br><br></span>
+                <span class="reporter-method-output">Woodland Park : value passed to element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_city_0]<br><br></span>
+                <span class="reporter-method-output">1116 McBride Ave : value passed to element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_street_0]<br><br></span>
+                <span class="reporter-method-output">NJ : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_state_0]<br><br></span>
+                <span class="reporter-method-output">07424 : value passed to element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_zipCode_0]<br><br></span>
+                <span class="reporter-method-output">2003 : value passed to element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_livingYear_0]<br><br></span>
+                <span class="reporter-method-output">Element is clicking : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> xpath: //span[text()='Continue ']]<br><br></span>
+                <span class="reporter-method-output">2021 : value passed to element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_year_0]<br><br></span>
+                <span class="reporter-method-output">TYTA : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_make_0]<br><br></span>
+                <span class="reporter-method-output">CAMRY LE AWD : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_model_0]<br><br></span>
+                <span class="reporter-method-output">SEDAN 4D, V4, 2.5L, 4WD : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_subModel_0]<br><br></span>
+                <span class="reporter-method-output">002 : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_coverage_0]<br><br></span>
+                <span class="reporter-method-output">3 : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_ownerTitle_0]<br><br></span>
+                <span class="reporter-method-output">3 : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_airbags_0]<br><br></span>
+                <span class="reporter-method-output">2 : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_alarm_0]<br><br></span>
+                <span class="reporter-method-output">3 : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_residentialParking_0]<br><br></span>
+                <span class="reporter-method-output">1 : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> xpath: //select[@id='F_usage_0']]<br><br></span>
+                <span class="reporter-method-output">Element is clicking : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> xpath: //input[@id='F_anotherVehicle_id_0_1']]<br><br></span>
+                <span class="reporter-method-output">Element is clicking : [[ChromeDriver: chrome on WINDOWS (41336128f2747448cf6c6bc9b63eb52f)] -> id: F_continue_0]<br><br></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">autoTestWithDataProviderClass(dataProvider.AutoData@788e3702)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">[[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> xpath: //h1[text()='Get a Customized Insurance Quote']] has text : GET A CUSTOMIZED INSURANCE QUOTE<br></span>
+                <span class="reporter-method-output">Actual : GET A CUSTOMIZED INSURANCE QUOTE<<<>>>Expeted : GET A CUSTOMIZED INSURANCE QUOTE<br></span>
+                <span class="reporter-method-output">Element is clicking : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> xpath: //button[@class='LeadRouting__select a'][1]]<br><br></span>
+                <span class="reporter-method-output">07508 : value passed to element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: uid_54]<br><br></span>
+                <span class="reporter-method-output">Element is clicking : Proxy element for: DefaultElementLocator 'By.xpath: (//span[@class='LoadingButton__content'])[1]'<br><br></span>
+                <span class="reporter-method-output">Element is clicking : Proxy element for: DefaultElementLocator 'By.xpath: //span[text()='Get a Quote']'<br><br></span>
+                <span class="reporter-method-output">07508 : value passed to element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: uid_34]<br><br></span>
+                <span class="reporter-method-output">A : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: uid_37]<br><br></span>
+                <span class="reporter-method-output">Element is clicking : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> xpath: (//button[@type='submit'])[1]]<br><br></span>
+                <span class="reporter-method-output">Jimmy : value passed to element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_PH_FirstName_0]<br><br></span>
+                <span class="reporter-method-output">Z : value passed to element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_PH_MiddleInitial_0]<br><br></span>
+                <span class="reporter-method-output">Butler : value passed to element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_PH_LastName_0]<br><br></span>
+                <span class="reporter-method-output">12251988 : value passed to element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_PH_DOB_0]<br><br></span>
+                <span class="reporter-method-output">reachme@gmail.com : value passed to element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_PH_email_0]<br><br></span>
+                <span class="reporter-method-output">Haledon : value passed to element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_city_0]<br><br></span>
+                <span class="reporter-method-output">373 Hobart Ave : value passed to element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_street_0]<br><br></span>
+                <span class="reporter-method-output">NJ : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_state_0]<br><br></span>
+                <span class="reporter-method-output">07508 : value passed to element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_zipCode_0]<br><br></span>
+                <span class="reporter-method-output">2003 : value passed to element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_livingYear_0]<br><br></span>
+                <span class="reporter-method-output">Element is clicking : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> xpath: //span[text()='Continue ']]<br><br></span>
+                <span class="reporter-method-output">2021 : value passed to element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_year_0]<br><br></span>
+                <span class="reporter-method-output">HOND : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_make_0]<br><br></span>
+                <span class="reporter-method-output">CIVIC SPORT : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_model_0]<br><br></span>
+                <span class="reporter-method-output">HCHBK 4D, V4, 1.5L, 2WD : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_subModel_0]<br><br></span>
+                <span class="reporter-method-output">002 : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_coverage_0]<br><br></span>
+                <span class="reporter-method-output">2 : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_ownerTitle_0]<br><br></span>
+                <span class="reporter-method-output">3 : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_airbags_0]<br><br></span>
+                <span class="reporter-method-output">2 : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_alarm_0]<br><br></span>
+                <span class="reporter-method-output">3 : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_residentialParking_0]<br><br></span>
+                <span class="reporter-method-output">2 : value has been selected from the element : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> xpath: //select[@id='F_usage_0']]<br><br></span>
+                <span class="reporter-method-output">Element is clicking : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> xpath: //input[@id='F_anotherVehicle_id_0_1']]<br><br></span>
+                <span class="reporter-method-output">Element is clicking : [[ChromeDriver: chrome on WINDOWS (3d032a0aeb23d33c1bcc7a40438d0c98)] -> id: F_continue_0]<br><br></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -389,11 +322,11 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">practice.TestRobustPractice</span>
+              <span class="ignored-class-name">com.amfam.test.home.HomeTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">dependsOnMethod</span>
+                <span class="ignored-method-name">homeTest2</span>
                 <br/>
-                <span class="ignored-method-name">dependsOnGroups</span>
+                <span class="ignored-method-name">homeTest1</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -405,58 +338,54 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">practice.TestRobustPractice</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.amfam.test.auto.AutoTestDataProviderClass</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">reportingInitiating</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">265 ms</span>
+                <span class="method-start">421 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">startReport(public void practice.TestRobustPractice.toyotaTestWithoutParam())</span>
-                <span class="method-start">6404 ms</span>
+                <span class="method-name">startReport(public void com.amfam.test.auto.AutoTestDataProviderClass.autoTestWithDataProviderClass(dataProvider...)</span>
+                <span class="method-start">9534 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">toyotaTestWithoutParam</span>
-                <span class="method-start">6421 ms</span>
+                <span class="method-name">autoTestWithDataProviderClass(dataProvider.AutoData@650c405c)</span>
+                <span class="method-start">9555 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">afterEachTestMethod([TestResult name=toyotaTestWithoutParam status=FAILURE method=TestRobustPractice.toyotaTestWithoutPa...)</span>
-                <span class="method-start">64681 ms</span>
+                <span class="method-name">afterEachTestMethod([TestResult name=autoTestWithDataProviderClass status=SUCCESS method=AutoTestDataProviderClass.autoT...)</span>
+                <span class="method-start">53183 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">cleaningUp</span>
-                <span class="method-start">64718 ms</span>
+                <span class="method-start">53184 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">64728 ms</span>
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">53425 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">startReport</span>
-                <span class="method-start">64733 ms</span>
+                <span class="method-name">startReport(public void com.amfam.test.auto.AutoTestDataProviderClass.autoTestWithDataProviderClass(dataProvider...)</span>
+                <span class="method-start">60317 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">hondaTest</span>
-                <span class="method-start">64740 ms</span>
+                <span class="method-name">autoTestWithDataProviderClass(dataProvider.AutoData@788e3702)</span>
+                <span class="method-start">60319 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterEachTestMethod</span>
-                <span class="method-start">64750 ms</span>
+                <span class="method-name">cleaningUp</span>
+                <span class="method-start">109550 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
-                <span class="method-name">cleaningUp</span>
-                <span class="method-start">64751 ms</span>
+                <span class="method-name">afterEachTestMethod([TestResult name=autoTestWithDataProviderClass status=SUCCESS method=AutoTestDataProviderClass.autoT...)</span>
+                <span class="method-start">109550 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">endReport</span>
-                <span class="method-start">64817 ms</span>
+                <span class="method-start">109771 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
