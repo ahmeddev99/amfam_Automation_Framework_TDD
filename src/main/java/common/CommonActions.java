@@ -193,32 +193,6 @@ public class CommonActions {
 		BaseClass.driver.switchTo().window(listOfWindows.get(windowsCount - 1));
 	}
 	
-	/*
-		to write this in pages class
-		Public void inputZipCode(CommonsActions commonsActions, String Value) {
-		System.out.println(BaseClass.driver.getWindowHandles().size());
-		System.out.println(BaseClass.driver.switchTo().alert());
-		Baseclass.driver.switchTo().frame(0);
-		CommonsAction.inputText(enterZipCodeElement, value)
-		
-		once you run the code (TestNG)
-		you get error --> NO AlertPresentException: no such alert
-		and syso --> will give how many window (2)
-		
-		you could delete those two lines 
-		System.out.println(BaseClass.driver.getWindowHandles().size()); // is not a window
-		System.out.println(BaseClass.driver.switchTo().alert()); // is not a alert
-		
-		if those error message is true than it become iframe
-		
-		Public void inputZipCode(CommonsActions commonsActions, String Value) {
-		Baseclass.driver.switchTo().frame(0);
-		CommonsAction.inputText(enterZipCodeElement, value)
-	
-	
-	*/
-	
-	
 	
 	// any error accord it take screen shots
 	public String getScreenShot() {
@@ -238,6 +212,69 @@ public class CommonActions {
 		return fileLocation;
 	}
 	
-	
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+to write this in pages class
+Public void inputZipCode(CommonsActions commonsActions, String Value) {
+System.out.println(BaseClass.driver.getWindowHandles().size());
+System.out.println(BaseClass.driver.switchTo().alert());
+Baseclass.driver.switchTo().frame(0);
+CommonsAction.inputText(enterZipCodeElement, value)
+
+once you run the code (TestNG)
+you get error --> NO AlertPresentException: no such alert
+and syso --> will give how many window (2)
+
+you could delete those two lines 
+System.out.println(BaseClass.driver.getWindowHandles().size()); // is not a window
+System.out.println(BaseClass.driver.switchTo().alert()); // is not a alert
+
+if those error message is true than it become iframe
+
+Public void inputZipCode(CommonsActions commonsActions, String Value) {
+Baseclass.driver.switchTo().frame(0);
+CommonsAction.inputText(enterZipCodeElement, value)
+
+
+*/

@@ -2,7 +2,6 @@ package base;
 
 import java.lang.reflect.Method;
 import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -15,7 +14,6 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
-
 import common.CommonActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.DriverDetailsPage;
@@ -29,11 +27,9 @@ import reporting.ExtentManager;
 import reporting.ExtentTestManager;
 import utils.ReadConfigFile;
 
-
 public class BaseClass {
 	public static WebDriver driver;
 	private ExtentReports extent;
-	
 	protected LandingPage landingPage;
 	protected CommonActions commonActions;
 	protected ZipCodePage1 zipCodePage1;
@@ -43,20 +39,18 @@ public class BaseClass {
 	protected VehicleDetailsPages vehicleDetailsPages;
 	protected DriverDetailsPage driverDetailsPage;
 	
-	
 	@BeforeSuite
 	public void reportingInitiating() {
 		extent = ExtentManager.getInstance();
 	}
 	
-	
 	@Parameters({"browser"})
 	@BeforeMethod
 	public void setUp(String browser) {
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+//		WebDriverManager.chromedriver().setup();
+//		driver = new ChromeDriver();
 		// replace top 2 lines with settingUpDriver("browser")
-//		settingUpDriver(browser);
+		settingUpDriver(browser);
 		driver.get(ReadConfigFile.getInstance().getUrl());
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds((ReadConfigFile.getInstance().getPageLoadTime())));
@@ -80,6 +74,11 @@ public class BaseClass {
 			driver = new ChromeDriver();
 		}
 		return driver;
+		/*
+		 * if(browser.equalsIgnoreCase("chrome")) {
+			WebDriverManager.chromedriver().driverVersion("").setup();
+			driver = new ChromeDriver();
+		 */
 	}
 	
 	@BeforeMethod
@@ -106,18 +105,15 @@ public class BaseClass {
 		}
 	}
 
-	
 	@AfterMethod
 	public void cleaningUp() {
 		driver.quit();
 	}
 	
-	
 	@AfterSuite
 	public void endReport() {
 		extent.flush();
 	}
-	
 	
 	public void initClasses() {
 		commonActions = new CommonActions();
@@ -129,5 +125,4 @@ public class BaseClass {
 		vehicleDetailsPages = new VehicleDetailsPages(driver);
 		driverDetailsPage = new DriverDetailsPage(driver);	
 	}
-
 }

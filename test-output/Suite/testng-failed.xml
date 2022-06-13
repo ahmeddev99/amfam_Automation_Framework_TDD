@@ -3,20 +3,24 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <exclude name="home"/>
+        <exclude name="auto"/>
+      </run>
+    </groups>
     <classes>
-      <class name="practice.TestRobustPractice">
+      <class name="com.amfam.test.auto.AutoTestExcelDataProvider">
         <methods>
           <include name="afterEachTestMethod"/>
-          <include name="toyotaTestWithoutParam"/>
           <include name="reportingInitiating"/>
           <include name="cleaningUp"/>
           <include name="endReport"/>
           <include name="setUp"/>
           <include name="startReport"/>
-          <include name="hondaTest"/>
           <include name="toyotaTest"/>
         </methods>
-      </class> <!-- practice.TestRobustPractice -->
+      </class> <!-- com.amfam.test.auto.AutoTestExcelDataProvider -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
